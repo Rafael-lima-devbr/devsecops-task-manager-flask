@@ -1,65 +1,19 @@
-# Task-Manager-using-Flask
+# DevSecOps Task Manager Flask
 
-A simple web application to store your To-Do Tasks .
+Projeto acadêmico de DevSecOps baseado em uma aplicação Flask de gerenciamento de tarefas.
 
-# Features
+Este repositório utiliza uma aplicação base pública e adiciona práticas de DevSecOps, incluindo:
 
-- User Authentication
-- Easy to use and deploy locally.
+- Ajuste de dependências para execução em Python 3.11
+- Containerização com Docker
+- Execução com Docker Compose
+- Pipeline CI/CD com GitHub Actions
+- Testes automatizados com pytest
+- Preparação para análises de segurança SAST, DAST e verificação de dependências
 
-# Requirements
+## Créditos
 
-Execute the following command to install the required third party libraries:
+A aplicação base utilizada neste projeto foi obtida a partir do repositório público:
+https://github.com/AdityaBagad/Task-Manager-using-Flask
 
-```pip3 install -r requirements.txt```
-
-# Usage
-
-1. Clone the repository using the following command
-    
-    ```git clone https://github.com/AdityaBagad/Task-Manager-using-Flask.git```
-
-2. Install the dependencies using
-
-    ```cd  Task-Manager-using-Flask```
-    
-    ```pip3 install -r requirements.txt```
-
-3. Run this command to start the application
-
-    ```cd todo_project```
-
-    ```python run.py```
-
-# Results
-
-## Registration Page
-Login or Register if you dont have an account
-
-![Registration Page](output/register.jpg)
-
-## Accessing URL's 
-User cannot access any URL's if they are not logged in
-
-![Invalid Access](output/invalid-access.jpg)
-
-## After Successfull Login
-See all your tasks after successfull login.
-
-![After Login](output/after-login.jpg)
-
-## Add Tasks
-Click the **Add Task** link in the side-bar to add tasks
-
-![Image of Yaktocat](output/add-task.jpg)
-
-## View All Tasks
-Click the **View All Task** link in the side-bar to see all tasks. You can **Update** and **Delete** Tasks from this page.
-
-![Image of Yaktocat](output/all-tasks.jpg)
-
-## Account Settings
-Change your username and password. You can access this by clicking dropdown in the Navbar
-
-![Image of Yaktocat](output/account-settings.jpg)
-
+As adaptações realizadas neste repositório têm finalidade acadêmica e foco em práticas de DevSecOps.

@@ -87,10 +87,13 @@ jobs:
         run: |
           docker run -d -p 5000:5000 --name task-manager-stage task-manager-flask
           sleep 15
+          curl http://127.0.0.1:5000
+
+      - name: Criar pasta do relatorio ZAP
+        run: mkdir -p zap-stage-reports
 
       - name: Executar OWASP ZAP no ambiente de stage
         run: |
-          mkdir -p zap-stage-reports
           docker run --rm \
             --network host \
             -v ${{ github.workspace }}/zap-stage-reports:/zap/wrk \
@@ -99,7 +102,10 @@ jobs:
             -t http://127.0.0.1:5000 \
             -r zap-stage-report.html || true
 
-      - name: Publicar relatorio ZAP
+      - name: Listar relatorios gerados
+        run: ls -la zap-stage-reports
+
+      - name: Publicar relatorio ZAP como artefato
         uses: actions/upload-artifact@v4
         with:
           name: zap-stage-report

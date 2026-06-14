@@ -1,0 +1,29 @@
+groups:
+  - name: task-manager-alerts
+    rules:
+      - alert: TaskManagerDown
+        expr: up{job="task-manager-flask"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Aplicacao Task Manager indisponivel"
+          description: "O Prometheus nao conseguiu coletar metricas da aplicacao Flask."
+
+      - alert: PossibleBruteForceLogin
+        expr: sum(increase(flask_http_requests_total{endpoint="/login"}[2m])) > 10
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Possivel tentativa de forca bruta"
+          description: "Foram detectadas muitas requisicoes para a rota de login em curto periodo."
+
+      - alert: HighServerErrors
+        expr: sum(increase(flask_http_requests_total{status=~"5.."}[5m])) > 0
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Erros internos detectados"
+          description: "A aplicacao retornou respostas HTTP 5xx nos ultimos minutos."

@@ -6,3 +6,22 @@ services:
     container_name: task-manager-flask
     ports:
       - "5000:5000"
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus-task-manager
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./monitoring/alert.rules.yml:/etc/prometheus/alert.rules.yml
+    depends_on:
+      - task-manager
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana-task-manager
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus

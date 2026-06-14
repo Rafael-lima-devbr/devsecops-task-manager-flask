@@ -110,3 +110,26 @@ jobs:
         with:
           name: zap-stage-report
           path: zap-stage-reports/zap-stage-report.html
+
+  post-deploy-monitoring:
+    runs-on: ubuntu-latest
+    needs: dast-stage
+    if: github.ref == 'refs/heads/stage'
+
+    steps:
+      - name: Baixar codigo do repositorio
+        uses: actions/checkout@v4
+
+      - name: Subir aplicacao com monitoramento
+        run: |
+          docker compose up -d --build
+          sleep 20
+
+      - name: Validar endpoint de metricas da aplicacao
+        run: curl http://127.0.0.1:5000/metrics
+
+      - name: Validar Prometheus
+        run: curl http://127.0.0.1:9090/-/healthy
+
+      - name: Listar containers de monitoramento
+        run: docker ps

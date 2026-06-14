@@ -222,6 +222,10 @@ production   → produção
 
 Este projeto foi desenvolvido com finalidade acadêmica, simulando um ciclo DevSecOps completo em uma aplicação Flask. Algumas etapas, como deploy em stage e monitoramento, foram simuladas em ambiente controlado utilizando Docker e GitHub Actions.
 
+## Observação sobre linguagens
+
+O GitHub pode classificar este repositório majoritariamente como JavaScript devido à presença de arquivos estáticos da aplicação base. No entanto, a aplicação é executada com Python/Flask, e o foco deste projeto está nas práticas de DevSecOps aplicadas ao ciclo de desenvolvimento, segurança, entrega e monitoramento.
+
 ## Créditos
 
 A aplicação base utilizada neste projeto foi obtida a partir do repositório público:

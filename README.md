@@ -4,6 +4,8 @@ Projeto acadêmico que aplica práticas de **DevOps e DevSecOps** a uma aplicaç
 
 **Status:** Projeto acadêmico concluído
 
+<!-- MEDIA: Adicione aqui um screenshot do GitHub Actions ou uma imagem que mostre o pipeline executando com sucesso. -->
+
 ## Visão geral
 
 A aplicação base é um gerenciador de tarefas em Flask. O foco deste repositório está nas adaptações realizadas para exercitar um ciclo DevSecOps mais completo:
@@ -41,6 +43,8 @@ DAST
   v
 Monitoring
 ```
+
+<!-- MEDIA: Se você fizer um diagrama visual do pipeline, coloque-o aqui para substituir ou complementar o fluxo em texto. -->
 
 O workflow principal está em `.github/workflows/ci.yml`.
 
@@ -142,6 +146,8 @@ docker run --rm \
 ## Monitoramento
 
 A aplicação expõe métricas em `/metrics`, coletadas pelo Prometheus e visualizadas no Grafana.
+
+<!-- MEDIA: Adicione aqui um screenshot do dashboard do Grafana quando quiser mostrar a observabilidade do projeto. -->
 
 O projeto também inclui regras de alerta para situações como:
 

@@ -4,23 +4,6 @@ Projeto acadêmico que aplica práticas de **DevOps e DevSecOps** a uma aplicaç
 
 **Status:** Projeto acadêmico concluído
 
-## Evidências do pipeline
-
-<p align="center">
-  <img width="88%" alt="GitHub Actions CI/CD pipeline execution" src="https://github.com/user-attachments/assets/4ca15a62-ce3a-4ea4-839a-5a5f0cb4ad8e" />
-</p>
-<p align="center"><sub>Execução do pipeline CI/CD no GitHub Actions.</sub></p>
-
-<p align="center">
-  <img width="88%" alt="OWASP ZAP DAST report" src="https://github.com/user-attachments/assets/7ff23bce-5318-4dc9-852b-a9c9a77c7f4d" />
-</p>
-<p align="center"><sub>Relatório de análise dinâmica de segurança com OWASP ZAP.</sub></p>
-
-<p align="center">
-  <img width="88%" alt="Post-deploy monitoring stage in GitHub Actions" src="https://github.com/user-attachments/assets/81f4e75c-4396-4b0c-b403-d765453778e1" />
-</p>
-<p align="center"><sub>Pipeline com etapa de monitoramento pós-deploy.</sub></p>
-
 ## Visão geral
 
 A aplicação base é um gerenciador de tarefas em Flask. O foco deste repositório está nas adaptações realizadas para exercitar um ciclo DevSecOps mais completo:
@@ -60,6 +43,11 @@ Monitoring
 ```
 
 O workflow principal está em `.github/workflows/ci.yml`.
+
+<p align="center">
+  <img width="88%" alt="GitHub Actions CI/CD pipeline execution" src="https://github.com/user-attachments/assets/4ca15a62-ce3a-4ea4-839a-5a5f0cb4ad8e" />
+</p>
+<p align="center"><sub>Execução do pipeline CI/CD no GitHub Actions.</sub></p>
 
 ## Tecnologias
 
@@ -156,6 +144,11 @@ docker run --rm \
   -r zap-report.html
 ```
 
+<p align="center">
+  <img width="88%" alt="OWASP ZAP DAST report" src="https://github.com/user-attachments/assets/7ff23bce-5318-4dc9-852b-a9c9a77c7f4d" />
+</p>
+<p align="center"><sub>Relatório de análise dinâmica de segurança gerado pelo OWASP ZAP.</sub></p>
+
 ## Monitoramento
 
 A aplicação expõe métricas em `/metrics`, coletadas pelo Prometheus e visualizadas no Grafana.
@@ -165,6 +158,11 @@ O projeto também inclui regras de alerta para situações como:
 - aplicação indisponível;
 - possível tentativa de força bruta na rota de login;
 - respostas HTTP 5xx.
+
+<p align="center">
+  <img width="88%" alt="Post-deploy monitoring stage in GitHub Actions" src="https://github.com/user-attachments/assets/81f4e75c-4396-4b0c-b403-d765453778e1" />
+</p>
+<p align="center"><sub>Pipeline com a etapa de monitoramento pós-deploy.</sub></p>
 
 ## Fluxo de branches utilizado
 

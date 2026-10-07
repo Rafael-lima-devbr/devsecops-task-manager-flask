@@ -4,7 +4,14 @@ Projeto acadêmico que aplica práticas de **DevOps e DevSecOps** a uma aplicaç
 
 **Status:** Projeto acadêmico concluído
 
-<!-- MEDIA: Adicione aqui um screenshot do GitHub Actions ou uma imagem que mostre o pipeline executando com sucesso. -->
+<img width="1186" height="864" alt="image" src="https://github.com/user-attachments/assets/4ca15a62-ce3a-4ea4-839a-5a5f0cb4ad8e" />
+
+<img width="1193" height="722" alt="image" src="https://github.com/user-attachments/assets/7ff23bce-5318-4dc9-852b-a9c9a77c7f4d" />
+
+<img width="1186" height="703" alt="image" src="https://github.com/user-attachments/assets/81f4e75c-4396-4b0c-b403-d765453778e1" />
+
+
+
 
 ## Visão geral
 

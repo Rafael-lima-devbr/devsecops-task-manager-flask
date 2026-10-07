@@ -4,14 +4,22 @@ Projeto acadêmico que aplica práticas de **DevOps e DevSecOps** a uma aplicaç
 
 **Status:** Projeto acadêmico concluído
 
-<img width="1186" height="864" alt="image" src="https://github.com/user-attachments/assets/4ca15a62-ce3a-4ea4-839a-5a5f0cb4ad8e" />
+## Evidências do pipeline
 
-<img width="1193" height="722" alt="image" src="https://github.com/user-attachments/assets/7ff23bce-5318-4dc9-852b-a9c9a77c7f4d" />
+<p align="center">
+  <img width="88%" alt="GitHub Actions CI/CD pipeline execution" src="https://github.com/user-attachments/assets/4ca15a62-ce3a-4ea4-839a-5a5f0cb4ad8e" />
+</p>
+<p align="center"><sub>Execução do pipeline CI/CD no GitHub Actions.</sub></p>
 
-<img width="1186" height="703" alt="image" src="https://github.com/user-attachments/assets/81f4e75c-4396-4b0c-b403-d765453778e1" />
+<p align="center">
+  <img width="88%" alt="OWASP ZAP DAST report" src="https://github.com/user-attachments/assets/7ff23bce-5318-4dc9-852b-a9c9a77c7f4d" />
+</p>
+<p align="center"><sub>Relatório de análise dinâmica de segurança com OWASP ZAP.</sub></p>
 
-
-
+<p align="center">
+  <img width="88%" alt="Post-deploy monitoring stage in GitHub Actions" src="https://github.com/user-attachments/assets/81f4e75c-4396-4b0c-b403-d765453778e1" />
+</p>
+<p align="center"><sub>Pipeline com etapa de monitoramento pós-deploy.</sub></p>
 
 ## Visão geral
 
@@ -50,8 +58,6 @@ DAST
   v
 Monitoring
 ```
-
-<!-- MEDIA: Se você fizer um diagrama visual do pipeline, coloque-o aqui para substituir ou complementar o fluxo em texto. -->
 
 O workflow principal está em `.github/workflows/ci.yml`.
 
@@ -153,8 +159,6 @@ docker run --rm \
 ## Monitoramento
 
 A aplicação expõe métricas em `/metrics`, coletadas pelo Prometheus e visualizadas no Grafana.
-
-<!-- MEDIA: Adicione aqui um screenshot do dashboard do Grafana quando quiser mostrar a observabilidade do projeto. -->
 
 O projeto também inclui regras de alerta para situações como:
 
